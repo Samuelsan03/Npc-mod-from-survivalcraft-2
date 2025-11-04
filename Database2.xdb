@@ -239,5 +239,80 @@
         <Parameter Name="EggTypeIndex" Guid="e9f0a1b2-c3d4-0567-abcd-ef0123456789" Value="203" Type="int" />
     </ParameterSet>
 </EntityTemplate>
+
+         <EntityTemplate Name="Barack" Guid="f8a9b0c1-d2e3-4456-9234-56789abcdef0" InheritanceParent="e4275171-a39f-413f-8888-4c472868364d">
+    <MemberComponentTemplate Name="AvoidPlayerBehavior" Guid="a9b0c1d2-e3f4-4567-9345-6789abcdef01" InheritanceParent="3942e891-6b50-467c-8da5-a15bc63e59e0">
+        <Parameter Name="DayRange" Guid="b0c1d2e3-f4a5-4678-9456-789abcdef012" Value="15" Type="float" />
+        <Parameter Name="NightRange" Guid="c1d2e3f4-a5b6-4789-9567-89abcdef0123" Value="0" Type="float" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="EatPickableBehavior" Guid="d2e3f4a5-b6c7-4890-9678-9abcdef01234">
+        <ParameterSet Name="FoodFactors" Guid="e3f4a5b6-c7d8-4901-9789-abcdef012345">
+            <Parameter Name="Fish" Guid="f4a5b6c7-d8e9-5012-9890-bcdef0123456" Value="1" Type="float" />
+            <Parameter Name="Meat" Guid="a5b6c7d8-e9f0-5123-9901-cdef01234567" Value="1" Type="float" />
+        </ParameterSet>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="AvoidFireBehavior" Guid="b6c7d8e9-f0a1-5234-0012-def012345678" InheritanceParent="885b2df5-b47b-4c53-bda0-5c1a0c988a3c" />
+    <MemberComponentTemplate Name="Locomotion" Guid="c7d8e9f0-a1b2-5345-0123-ef0123456789">
+        <Parameter Name="AccelerationFactor" Guid="d8e9f0a1-b2c3-5456-1234-f0123456789a" Value="1.3" Type="float" />
+        <Parameter Name="FlySpeed" Guid="e9f0a1b2-c3d4-5567-2345-0123456789ab" Value="0" Type="float" />
+        <Parameter Name="TurnSpeed" Guid="f0a1b2c3-d4e5-5678-3456-123456789abc" Value="7" Type="float" />
+        <Parameter Name="WalkSpeed" Guid="a1b2c3d4-e5f6-5789-4567-23456789abcd" Value="3.8" Type="float" />
+        <Parameter Name="LadderSpeed" Guid="b2c3d4e5-f6a7-5890-5678-3456789abcde" Value="0" Type="float" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Loot" Guid="c3d4e5f6-a7b8-5901-6789-456789abcdef">
+        <ParameterSet Name="Loot" Guid="d4e5f6a7-b8c9-6012-7890-56789abcdef0">
+            <Parameter Name="1" Guid="e5f6a7b8-c9d0-6123-8901-6789abcdef01" Value="IronIngotBlock;25;50" Type="string" />
+        </ParameterSet>
+        <ParameterSet Name="LootOnFire" Guid="a7b8c9d0-e1f2-6345-0123-89abcdef0123" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Body" Guid="b8c9d0e1-f2a3-6456-1234-9abcdef01234">
+        <Parameter Name="Mass" Guid="c9d0e1f2-a3b4-6567-2345-abcdef012345" Value="65" Type="float" />
+        <Parameter Name="BoxSize" Guid="d0e1f2a3-b4c5-6678-3456-bcdef0123456" Value="0.9,1.0,0.9" Type="Vector3" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Creature" Guid="e1f2a3b4-c5d6-6789-4567-cdef01234567">
+        <Parameter Name="DisplayName" Guid="f2a3b4c5-d6e7-6890-5678-def012345678" Value="Barack" Type="string" />
+        <Parameter Name="Category" Guid="a3b4c5d6-e7f8-6901-6789-ef0123456789" Value="LandOther" Type="Game.CreatureCategory" />
+        <Parameter Name="Description" Guid="b4c5d6e7-f8a9-7012-7890-f0123456789a" Value="Ricardo's twin brother, unlike his twin brother, is human, or so we think. Almost half strong and his power attack is a little less than his older brother's. If you him he will break your buttocks penetrated" Type="string" />
+        <Parameter Name="KillVerbs" Guid="c5d6e7f8-a9b0-7123-8901-0123456789ab" Value="Negotiated" Type="string" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="FindPlayerBehavior" Guid="d6e7f8a9-b0c1-7234-9012-123456789abc" InheritanceParent="44c9a961-258c-4eb3-81d1-d3ae249ae031" />
+    <MemberComponentTemplate Name="Miner" Guid="e7f8a9b0-c1d2-7345-0123-23456789abcd" InheritanceParent="8acca888-ba39-464f-bcf5-6ae15e448c62">
+        <Parameter Name="AttackPower" Guid="f8a9b0c1-d2e3-7456-1234-3456789abcde" Value="4.95" Type="float" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="HumanModel" Guid="a9b0c1d2-e3f4-7567-2345-456789abcdef" InheritanceParent="0566662e-bb24-45f9-84d8-f3c1e5d083df">
+        <Parameter Name="WalkLegsAngle" Guid="b0c1d2e3-f4a5-7678-3456-56789abcdef0" Value="0.3" Type="float" />
+        <Parameter Name="ModelName" Guid="c1d2e3f4-a5b6-7789-4567-6789abcdef01" Value="Models/HumanRealist" Type="string" />
+        <Parameter Name="TextureOverride" Guid="d2e3f4a5-b6c7-7890-5678-789abcdef012" Value="Textures/Barack" Type="string" />
+        <Parameter Name="WalkAnimationSpeed" Guid="e3f4a5b6-c7d8-7901-6789-89abcdef0123" Value="0.6" Type="float" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Health" Guid="f4a5b6c7-d8e9-8012-7890-9abcdef01234">
+        <Parameter Name="Health" Guid="a5b6c7d8-e9f0-8123-8901-abcdef012345" Value="3.5" Type="float" />
+        <Parameter Name="FireResilience" Guid="b6c7d8e9-f0a1-8234-9012-bcdef0123456" Value="12" Type="float" />
+        <Parameter Name="AttackResilience" Guid="c7d8e9f0-a1b2-8345-0123-cdef01234567" Value="12" Type="float" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="OnFire" Guid="d8e9f0a1-b2c3-8456-1234-def012345678" />
+    <MemberComponentTemplate Name="WalkAroundBehavior" Guid="e9f0a1b2-c3d4-8567-2345-ef0123456789" InheritanceParent="aebb86ce-4ee6-4ca0-850d-cd60051e1d71" />
+    <MemberComponentTemplate Name="HerdBehavior" Guid="f0a1b2c3-d4e5-8678-3456-f0123456789a" InheritanceParent="dfe7218e-ce14-4bde-8dac-f919c38e9efe">
+        <Parameter Name="HerdName" Guid="a1b2c3d4-e5f6-8789-4567-0123456789ab" Value="Alianza" Type="string" />
+        <Parameter Name="AutoNearbyCreaturesHelp" Guid="b2c3d4e5-f6a7-8890-5678-123456789abc" Value="True" Type="bool" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="FeedBehavior" Guid="c3d4e5f6-a7b8-8901-6789-23456789abcd" InheritanceParent="3d5c9b46-1592-45de-ae90-9d050021a5ad">
+        <Parameter Name="AutoFeed" Guid="d4e5f6a7-b8c9-9012-7890-3456789abcde" Value="False" Type="bool" />
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="ChaseBehavior" Guid="e5f6a7b8-c9d0-9123-8901-456789abcdef" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
+        <Parameter Name="AutoChaseMask" Guid="f6a7b8c9-d0e1-9234-9012-56789abcdef0" Value="LandPredator, WaterPredator, WaterOther, Bird" Type="Game.CreatureCategory" />
+        <Parameter Name="DayChaseRange" Guid="a7b8c9d0-e1f2-9345-0123-6789abcdef01" Value="5" Type="float" />
+        <Parameter Name="NightChaseRange" Guid="b8c9d0e1-f2a3-9456-1234-789abcdef012" Value="8" Type="float" />
+        <Parameter Name="ChaseNonPlayerProbability" Guid="c9d0e1f2-a3b4-9567-2345-89abcdef0123" Value="0.02" Type="float" />
+        <Parameter Name="NightChaseTime" Guid="d0e1f2a3-b4c5-9678-3456-9abcdef01234" Value="12" Type="float" />
+    </MemberComponentTemplate>
+    <ParameterSet Name="CreatureEggData" Guid="e1f2a3b4-c5d6-9789-4567-abcdef012345">
+        <Parameter Name="Color" Guid="f2a3b4c5-d6e7-9890-5678-bcdef0123456" Value="76,120,119" Type="Color" />
+        <Parameter Name="TextureSlot" Guid="a3b4c5d6-e7f8-9901-6789-cdef01234567" Value="164" Type="int" />
+        <Parameter Name="SwapUV" Guid="b4c5d6e7-f8a9-0012-7890-def012345678" Value="False" Type="bool" />
+        <Parameter Name="DisplayName" Guid="c5d6e7f8-a9b0-0123-8901-ef0123456789" Value="Barack Egg" Type="string" />
+        <Parameter Name="EggTypeIndex" Guid="d6e7f8a9-b0c1-0234-9012-f0123456789a" Value="204" Type="int" />
+    </ParameterSet>
+</EntityTemplate>
     </Folder>
 </samu>
