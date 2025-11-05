@@ -257,7 +257,7 @@
     <!-- COMPONENTE DE SONIDOS AGREGADO -->
     <MemberComponentTemplate Name="CreatureSounds" Guid="8e8de667-0d1a-42ee-8722-c88f55881113">
         <Parameter Name="PainSound" Guid="87663b93-21a5-469f-b354-fb4f0d11cb0e" Value="Audio/Creatures/Barack/Pain" Type="string" />
-        <Parameter Name="IdleSound" Guid="cb10aadc-6512-4478-9579-b3e45d95715f" Value="Audio/Creatures/Barack/Idle" Type="string" />
+        <Parameter Name="IdleSound" Guid="cb10aadc-6512-4478-9579-b3e45d95715f" Value="Audio/Creatures/Barack/Idie" Type="string" />
         <Parameter Name="AttackSound" Guid="d7c5e8d4-2b30-4d7f-8a9c-4e3f1b8e6c77" Value="Audio/Creatures/Barack/Attack" Type="string" />
 </MemberComponentTemplate>
     <MemberComponentTemplate Name="AvoidFireBehavior" Guid="b6c7d8e9-f0a1-5234-0012-def012345678" InheritanceParent="885b2df5-b47b-4c53-bda0-5c1a0c988a3c" />
@@ -657,4 +657,3 @@
 </EntityTemplate>
     </Folder>
 </samu>
-
