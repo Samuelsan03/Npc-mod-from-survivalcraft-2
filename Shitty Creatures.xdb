@@ -869,7 +869,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Creature" Guid="c0d1e2f3-a4b5-7456-bcde-0123456789a5">
         <Parameter Name="DisplayName" Guid="d1e2f3a4-b5c6-7567-cdef-123456789ab6" Value="La Muerte X" Type="string" />
-        <Parameter Name="Category" Guid="e2f3a4b5-c6d7-7678-def0-23456789abc7" Value="LandOther" Type="Game.CreatureCategory" />
+        <Parameter Name="Category" Guid="e2f3a4b5-c6d7-7678-def0-23456789abc7" Value="LandPredator" Type="Game.CreatureCategory" />
         <Parameter Name="Description" Guid="f3a4b5c6-d7e8-7789-ef01-3456789abcd8" Value="La Muerte X emerged from the violet infernal shadows, with skin and behavior forged in darkness. He is far from friendly his hostile nature drives him to destroy anything in his path. Approach him, and he will hunt you relentlessly… until death. His powers range from moderately strong physical strikes to deadly flame attacks; if you try to escape, he will launch fireballs at you. In the worst case, he hurls magical rocks that inflict devastating damage." Type="string" />
         <Parameter Name="KillVerbs" Guid="a4b5c6d7-e8f9-7890-f012-456789abcde9" Value="Annihilated" Type="string" />
     </MemberComponentTemplate>
@@ -943,7 +943,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Creature" Guid="f4a5b6c7-d8e9-7345-0123-123456789012">
         <Parameter Name="DisplayName" Guid="a5b6c7d8-e9f0-7456-1234-234567890123" Value="El Señor De Las Tumbas Moradas" Type="string" />
-        <Parameter Name="Category" Guid="b6c7d8e9-f0a1-7567-2345-345678901234" Value="LandOther" Type="Game.CreatureCategory" />
+        <Parameter Name="Category" Guid="b6c7d8e9-f0a1-7567-2345-345678901234" Value="LandPredator" Type="Game.CreatureCategory" />
         <Parameter Name="Description" Guid="c7d8e9f0-a1b2-7678-3456-456789012345" Value="What a surprise, I suppose. El Señor De Las Tumbas Moradas is the closest companion of La Muerte X they’re always together, always helping one another. But El Señor De Las Tumbas Moradas has received some mysterious upgrades beyond his friend. What kind of power does he hide? What attacks might he unleash? Could he summon something darker when threatened? That’s for you to find out. (Let’s just say you’ll understand once you face him yourself.) But be warned: if you strike him, he won’t forgive you. He’ll drag you down into the purple tombs and from that moment on, you’ll become his eternal slave in the shadows. He won’t be your friend not because he hates you, but because friendship was never part of his design." Type="string" />
         <Parameter Name="KillVerbs" Guid="d8e9f0a1-b2c3-7789-4567-567890123456" Value="Buried" Type="string" />
     </MemberComponentTemplate>
@@ -972,7 +972,7 @@
         <Parameter Name="AutoFeed" Guid="e7f8a9b0-c1d2-9678-3456-456789012345" Value="False" Type="bool" />
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="f8a9b0c1-d2e3-9789-4567-567890123456" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="a9b0c1d2-e3f4-9890-5678-678901234567" Value="LandPredator, WaterPredator" Type="Game.CreatureCategory" />
+        <Parameter Name="AutoChaseMask" Guid="a9b0c1d2-e3f4-9890-5678-678901234567" Value="LandOther, WaterPredator" Type="Game.CreatureCategory" />
         <Parameter Name="DayChaseRange" Guid="b0c1d2e3-f4a5-9901-6789-789012345678" Value="6" Type="float" />
         <Parameter Name="NightChaseRange" Guid="c1d2e3f4-a5b6-0012-7890-890123456789" Value="9" Type="float" />
         <Parameter Name="ChaseNonPlayerProbability" Guid="d2e3f4a5-b6c7-0123-8901-901234567890" Value="0.02" Type="float" />
@@ -1017,7 +1017,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Creature" Guid="b5c6d7e8-f9a0-7345-0123-223456789012">
         <Parameter Name="DisplayName" Guid="c6d7e8f9-a0b1-7456-1234-334567890123" Value="Lider Calaverico Supremo" Type="string" />
-        <Parameter Name="Category" Guid="d7e8f9a0-b1c2-7567-2345-445678901234" Value="LandOther" Type="Game.CreatureCategory" />
+        <Parameter Name="Category" Guid="d7e8f9a0-b1c2-7567-2345-445678901234" Value="LandPredator" Type="Game.CreatureCategory" />
         <Parameter Name="Description" Guid="e8f9a0b1-c2d3-7678-3456-556789012345" Value="Who is the true ruler of darkness and tombs? It's none other than Líder Calavérico Supremo the highest and most fearsome leader of this world. At first glance, he may seem underwhelming, with attacks that appear weak... but don't be fooled. His speed rivals that of a cheetah, and when the full moon or new moon rises, he transforms into a monstrous force of nature. His mutated form might remind you of a Tank. Could he be a worthy rival to Fumador Químico Brawny in terms of brute strength, raw impact, and sheer chaos? That's a question only battle can answer." Type="string" />
         <Parameter Name="KillVerbs" Guid="f9a0b1c2-d3e4-7789-4567-667890123456" Value="Dominated" Type="string" />
     </MemberComponentTemplate>
@@ -1046,7 +1046,7 @@
         <Parameter Name="AutoFeed" Guid="a8b9c0d1-e2f3-9678-3456-556789012345" Value="False" Type="bool" />
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="b9c0d1e2-f3a4-9789-4567-667890123456" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="c0d1e2f3-a4b5-9890-5678-778901234567" Value="LandPredator, WaterPredator" Type="Game.CreatureCategory" />
+        <Parameter Name="AutoChaseMask" Guid="c0d1e2f3-a4b5-9890-5678-778901234567" Value="LandOther, WaterPredator" Type="Game.CreatureCategory" />
         <Parameter Name="DayChaseRange" Guid="d1e2f3a4-b5c6-9901-6789-889012345678" Value="7" Type="float" />
         <Parameter Name="NightChaseRange" Guid="e2f3a4b5-c6d7-0012-7890-990123456789" Value="11" Type="float" />
         <Parameter Name="ChaseNonPlayerProbability" Guid="f3a4b5c6-d7e8-0123-8901-001234567890" Value="0.03" Type="float" />
@@ -1096,7 +1096,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Creature" Guid="c6d7e8f9-a0b1-7345-0123-323456789012">
         <Parameter Name="DisplayName" Guid="d7e8f9a0-b1c2-7456-1234-434567890123" Value="Lider Calaverico Supremo Alfa" Type="string" />
-        <Parameter Name="Category" Guid="e8f9a0b1-c2d3-7567-2345-545678901234" Value="LandOther" Type="Game.CreatureCategory" />
+        <Parameter Name="Category" Guid="e8f9a0b1-c2d3-7567-2345-545678901234" Value="LandPredator" Type="Game.CreatureCategory" />
         <Parameter Name="Description" Guid="f9a0b1c2-d3e4-7678-3456-656789012345" Value="He’s not just a threat he’s a declaration of war. Líder Calavérico Supremo Alfa is the mid-tier juggernaut of the tomb realm, a refined beast forged from chaos and vengeance. Stronger than most, faster than many, and meaner than you’d expect, he’s the kind of enemy that doesn’t wait for introductions. His attacks? Heavy and relentless. His speed? Almost unnatural. And when the moon shifts be it full or new he mutates into something far more dangerous. Some say his form resembles a Tank. Others wonder if he’s meant to rival Fumador Químico Brawny in raw strength, impact, and destruction. Want to know for sure? Then set the stage and watch them clash. Just don’t try it in Creative Mode—that’s like watching a storm from behind bulletproof glass. Líder Calavérico Supremo Alfa is not your ally. He’s not here to talk, negotiate, or join your cause. He is your enemy. And if you’re not ready… he’ll make sure you never get the chance to be." Type="string" />
         <Parameter Name="KillVerbs" Guid="a0b1c2d3-e4f5-7789-4567-767890123456" Value="Aniquilado" Type="string" />
     </MemberComponentTemplate>
@@ -1125,7 +1125,7 @@
         <Parameter Name="AutoFeed" Guid="b9c0d1e2-f3a4-9678-3456-656789012345" Value="False" Type="bool" />
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="c0d1e2f3-a4b5-9789-4567-767890123456" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="d1e2f3a4-b5c6-9890-5678-878901234567" Value="LandPredator, WaterPredator" Type="Game.CreatureCategory" />
+        <Parameter Name="AutoChaseMask" Guid="d1e2f3a4-b5c6-9890-5678-878901234567" Value="LandOther, WaterPredator" Type="Game.CreatureCategory" />
         <Parameter Name="DayChaseRange" Guid="e2f3a4b5-c6d7-9901-6789-989012345678" Value="8" Type="float" />
         <Parameter Name="NightChaseRange" Guid="f3a4b5c6-d7e8-0012-7890-099123456789" Value="13" Type="float" />
         <Parameter Name="ChaseNonPlayerProbability" Guid="a4b5c6d7-e8f9-0123-8901-101234567890" Value="0.04" Type="float" />
