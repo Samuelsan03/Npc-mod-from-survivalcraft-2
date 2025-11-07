@@ -898,7 +898,7 @@
         <Parameter Name="AutoFeed" Guid="b3c4d5e6-f7a8-9789-2345-789abcdef01c" Value="False" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="c4d5e6f7-a8b9-9890-3456-89abcdef012d" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-    <Parameter Name="AutoChaseMask" Guid="d5e6f7a8-b9c0-9901-4567-9abcdef0123e" Value="LandPredator, WaterPredator" Type="Game.CreatureCategory"/>
+    <Parameter Name="AutoChaseMask" Guid="d5e6f7a8-b9c0-9901-4567-9abcdef0123e" Value="LandOther, WaterPredator, WaterOther" Type="Game.CreatureCategory"/>
     <Parameter Name="DayChaseRange" Guid="e6f7a8b9-c0d1-0012-5678-abcdef01234f" Value="15" Type="float"/>
     <Parameter Name="NightChaseRange" Guid="f7a8b9c0-d1e2-0123-6789-bcdef0123450" Value="20" Type="float"/>
     <Parameter Name="ChaseNonPlayerProbability" Guid="a8b9c0d1-e2f3-0234-789a-cdef01234571" Value="0.1" Type="float"/>
@@ -972,7 +972,7 @@
         <Parameter Name="AutoFeed" Guid="e7f8a9b0-c1d2-9678-3456-456789012345" Value="False" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="f8a9b0c1-d2e3-9789-4567-567890123456" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="a9b0c1d2-e3f4-9890-5678-678901234567" Value="LandOther, WaterPredator" Type="Game.CreatureCategory"/>
+        <Parameter Name="AutoChaseMask" Guid="a9b0c1d2-e3f4-9890-5678-678901234567" Value="LandOther, WaterPredator, WaterOther" Type="Game.CreatureCategory"/>
         <Parameter Name="DayChaseRange" Guid="b0c1d2e3-f4a5-9901-6789-789012345678" Value="6" Type="float"/>
         <Parameter Name="NightChaseRange" Guid="c1d2e3f4-a5b6-0012-7890-890123456789" Value="9" Type="float"/>
         <Parameter Name="ChaseNonPlayerProbability" Guid="d2e3f4a5-b6c7-0123-8901-901234567890" Value="0.02" Type="float"/>
@@ -1046,7 +1046,7 @@
         <Parameter Name="AutoFeed" Guid="a8b9c0d1-e2f3-9678-3456-556789012345" Value="False" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="b9c0d1e2-f3a4-9789-4567-667890123456" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="c0d1e2f3-a4b5-9890-5678-778901234567" Value="LandOther, WaterPredator" Type="Game.CreatureCategory"/>
+        <Parameter Name="AutoChaseMask" Guid="c0d1e2f3-a4b5-9890-5678-778901234567" Value="LandOther, WaterPredator, WaterOther" Type="Game.CreatureCategory"/>
         <Parameter Name="DayChaseRange" Guid="d1e2f3a4-b5c6-9901-6789-889012345678" Value="7" Type="float"/>
         <Parameter Name="NightChaseRange" Guid="e2f3a4b5-c6d7-0012-7890-990123456789" Value="11" Type="float"/>
         <Parameter Name="ChaseNonPlayerProbability" Guid="f3a4b5c6-d7e8-0123-8901-001234567890" Value="0.03" Type="float"/>
@@ -1098,7 +1098,7 @@
         <Parameter Name="DisplayName" Guid="d7e8f9a0-b1c2-7456-1234-434567890123" Value="Lider Calaverico Supremo Alfa" Type="string"/>
         <Parameter Name="Category" Guid="e8f9a0b1-c2d3-7567-2345-545678901234" Value="LandPredator" Type="Game.CreatureCategory"/>
         <Parameter Name="Description" Guid="f9a0b1c2-d3e4-7678-3456-656789012345" Value="He’s not just a threat he’s a declaration of war. Líder Calavérico Supremo Alfa is the mid-tier juggernaut of the tomb realm, a refined beast forged from chaos and vengeance. Stronger than most, faster than many, and meaner than you’d expect, he’s the kind of enemy that doesn’t wait for introductions. His attacks? Heavy and relentless. His speed? Almost unnatural. And when the moon shifts be it full or new he mutates into something far more dangerous. Some say his form resembles a Tank. Others wonder if he’s meant to rival Fumador Químico Brawny in raw strength, impact, and destruction. Want to know for sure? Then set the stage and watch them clash. Just don’t try it in Creative Mode—that’s like watching a storm from behind bulletproof glass. Líder Calavérico Supremo Alfa is not your ally. He’s not here to talk, negotiate, or join your cause. He is your enemy. And if you’re not ready… he’ll make sure you never get the chance to be." Type="string"/>
-        <Parameter Name="KillVerbs" Guid="a0b1c2d3-e4f5-7789-4567-767890123456" Value="Aniquilado" Type="string"/>
+        <Parameter Name="KillVerbs" Guid="a0b1c2d3-e4f5-7789-4567-767890123456" Value="Annihilated" Type="string"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="FindPlayerBehavior" Guid="b1c2d3e4-f5a6-7890-5678-878901234567" InheritanceParent="44c9a961-258c-4eb3-81d1-d3ae249ae031"/>
     <MemberComponentTemplate Name="Miner" Guid="c2d3e4f5-a6b7-7901-6789-989012345678" InheritanceParent="8acca888-ba39-464f-bcf5-6ae15e448c62">
@@ -1125,7 +1125,7 @@
         <Parameter Name="AutoFeed" Guid="b9c0d1e2-f3a4-9678-3456-656789012345" Value="False" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="c0d1e2f3-a4b5-9789-4567-767890123456" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="d1e2f3a4-b5c6-9890-5678-878901234567" Value="LandOther, WaterPredator" Type="Game.CreatureCategory"/>
+        <Parameter Name="AutoChaseMask" Guid="d1e2f3a4-b5c6-9890-5678-878901234567" Value="LandOther, WaterPredator, WaterOther" Type="Game.CreatureCategory"/>
         <Parameter Name="DayChaseRange" Guid="e2f3a4b5-c6d7-9901-6789-989012345678" Value="8" Type="float"/>
         <Parameter Name="NightChaseRange" Guid="f3a4b5c6-d7e8-0012-7890-099123456789" Value="13" Type="float"/>
         <Parameter Name="ChaseNonPlayerProbability" Guid="a4b5c6d7-e8f9-0123-8901-101234567890" Value="0.04" Type="float"/>
@@ -1164,7 +1164,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Loot" Guid="4d10616b-f6e3-44e9-86d9-491fcdc7870c">
         <ParameterSet Name="Loot" Guid="b7d65f03-5992-49ba-ac41-05926eabd3a5">
-            <Parameter Name="1" Guid="f21b1f5c-e45b-4f8d-a9e0-41f464a0b98d" Value="PumpkinBlock;100;100" Type="string"/>
+            <Parameter Name="1" Guid="f21b1f5c-e45b-4f8d-a9e0-41f464a0b98d" Value="PumpkinBlock;2;5" Type="string"/>
             <Parameter Name="2" Guid="70e3ba97-374e-432b-8e60-18b1d54f2692" Value="BreadBlock;1;1;1" Type="string"/>
         </ParameterSet>
         <ParameterSet Name="LootOnFire" Guid="0ee7a2f3-c2a0-44c8-9365-8d687b5794db"/>
