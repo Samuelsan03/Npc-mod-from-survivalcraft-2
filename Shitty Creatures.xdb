@@ -1072,7 +1072,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="EatPickableBehavior" Guid="a7b8c9d0-e1f2-5123-4567-89abcd200123">
         <ParameterSet Name="FoodFactors" Guid="b8c9d0e1-f2a3-5234-5678-9abcd2001234">
-            <Parameter Name="Bread" Guid="c9d0e1f2-a3b4-5345-6789-abcd20012345" Value="1" Type="float"/>
+            <Parameter Name="Meat" Guid="c9d0e1f2-a3b4-5345-6789-abcd20012345" Value="1" Type="float"/>
         </ParameterSet>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="AvoidFireBehavior" Guid="d5e6f7a8-b9c0-5901-cdef-123456789a22" InheritanceParent="885b2df5-b47b-4c53-bda0-5c1a0c988a3c"/>
@@ -1151,7 +1151,7 @@
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="EatPickableBehavior" Guid="7569e828-18c7-4de2-a2d7-3161dd26e03f">
         <ParameterSet Name="FoodFactors" Guid="d10cdb16-34ca-4639-9a5b-89cd2c191311">
-            <Parameter Name="Pumpkin" Guid="a55851e2-9713-4d61-9362-bc8a6cfe8ae8" Value="1" Type="float"/>
+            <Parameter Name="Bread" Guid="a55851e2-9713-4d61-9362-bc8a6cfe8ae8" Value="1" Type="float"/>
 </ParameterSet>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="AvoidFireBehavior" Guid="4fa556d3-ec97-45d5-a77c-70b80639b955" InheritanceParent="885b2df5-b47b-4c53-bda0-5c1a0c988a3c"/>
@@ -1295,7 +1295,82 @@
     </ParameterSet>
 </EntityTemplate>
 
-<EntityTemplate Name="Butt-Head" Guid="a1b2c3d4-e5f6-4789-9012-3456789abcfe" InheritanceParent="e4275171-a39f-413f-8888-4c472868364d">
+<EntityTemplate Name="Butt-Head" Guid="09699a5a-89f9-4883-b77f-e8adf8f52473" InheritanceParent="e4275171-a39f-413f-8888-4c472868364d">
+    <MemberComponentTemplate Name="AvoidPlayerBehavior" Guid="3c2bb0f8-19c9-45b1-91b6-8616c5320cc7" InheritanceParent="3942e891-6b50-467c-8da5-a15bc63e59e0">
+        <Parameter Name="DayRange" Guid="3540aed3-f9ee-4dea-89fe-4702c4d54346" Value="0" Type="float"/>
+        <Parameter Name="NightRange" Guid="aa876061-b5b7-42fc-b18f-97d5a0bea90d" Value="0" Type="float"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="EatPickableBehavior" Guid="696da78d-cff9-49c2-8d9d-6207ceaa81b7">
+        <ParameterSet Name="FoodFactors" Guid="7cdc335a-c3b9-456d-8e58-36c28d4e97c0">
+            <Parameter Name="Fish" Guid="880cae70-bcf3-4c7c-9538-40c5de431fae" Value="1" Type="float"/>
+            <Parameter Name="Meat" Guid="4d700bf5-ee21-4648-a9a7-c32947fb3826" Value="1" Type="float"/>
+        </ParameterSet>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="AvoidFireBehavior" Guid="a2c3505d-340e-4993-b335-a8e691988a4f" InheritanceParent="885b2df5-b47b-4c53-bda0-5c1a0c988a3c"/>
+    <MemberComponentTemplate Name="Locomotion" Guid="b3e26ee9-f98b-4706-9c3b-51134b561e7e">
+        <Parameter Name="AccelerationFactor" Guid="cb33001d-383a-4a65-aec3-9ac89141348f" Value="1.2" Type="float"/>
+        <Parameter Name="FlySpeed" Guid="5db774c3-5f21-4f8c-849c-18a1e2b24d2f" Value="0" Type="float"/>
+        <Parameter Name="TurnSpeed" Guid="281526c1-0049-4449-8cc7-a7558ea7cf21" Value="8" Type="float"/>
+        <Parameter Name="WalkSpeed" Guid="e90406b8-1af3-43b2-aeb5-e2408f837c2f" Value="4.0" Type="float"/>
+        <Parameter Name="LadderSpeed" Guid="bd95d486-603f-48ae-a23e-3ab48edd3219" Value="0" Type="float"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Loot" Guid="948e3881-df55-49a3-ba4f-d82a38818f3c">
+        <ParameterSet Name="Loot" Guid="3e1f6eee-07d2-465d-9018-411b7d7ecc68">
+            <Parameter Name="1" Guid="95a34317-6b8a-42c4-8000-26280245295e" Value="ExperienceBlock;34;50" Type="string"/>
+        </ParameterSet>
+        <ParameterSet Name="LootOnFire" Guid="79d641cc-843b-4f58-aecc-868b8c0a34df"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Body" Guid="42077da0-ce0a-448f-94ca-faac95b153a8">
+        <Parameter Name="Mass" Guid="6c77f50a-b90f-4763-b252-90755b6f5b7a" Value="60" Type="float"/>
+        <Parameter Name="BoxSize" Guid="5e9bbda2-d0ff-435f-bbff-ebce635c3c50" Value="0.9,0.95,0.9" Type="Vector3"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Creature" Guid="c0cd4901-4930-4f62-94b4-5aa1849bdfed">
+        <Parameter Name="DisplayName" Guid="dc91aaa8-032e-4582-bdfd-6a44f06e6b99" Value="Butt-Head" Type="string"/>
+        <Parameter Name="Category" Guid="7030cf3d-abf2-406f-8d98-46d811dfc456" Value="LandOther" Type="Game.CreatureCategory"/>
+        <Parameter Name="Description" Guid="268fc934-c171-46c5-8ba5-9db44ecc8596" Value="Beavis is a teenage boy with a nervous laugh, broken speech, and a volatile personality. He’s impulsive, emotionally unstable, and easily distracted, often triggered by fire, violence, or loud music. He speaks in short, repetitive phrases and acts without thinking, showing no awareness of consequences. Though he often follows Butt-Head, he’s not just a sidekick; he has unpredictable outbursts, especially when he transforms into his hyperactive alter ego “Cornholio,” obsessing over toilet paper and speaking incoherently. Beavis doesn’t seek meaning, control, or purpose. He survives simply because he does, unaware of the damage he causes or the world around him." Type="string"/>
+        <Parameter Name="KillVerbs" Guid="93a5367f-ed39-4c10-b482-16ffb17e3a99" Value="Defeated, Beated" Type="string"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="FindPlayerBehavior" Guid="47484a23-a26f-4a35-8c65-ecad5f3d64d5" InheritanceParent="44c9a961-258c-4eb3-81d1-d3ae249ae031"/>
+    <MemberComponentTemplate Name="Miner" Guid="9d339f4d-e8ae-4b76-a152-d503431c27c1" InheritanceParent="8acca888-ba39-464f-bcf5-6ae15e448c62">
+        <Parameter Name="AttackPower" Guid="635ad25e-c444-420a-baa2-606324a63288" Value="5.5" Type="float"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="HumanModel" Guid="333d9d4c-9e4c-4e99-a22a-bcbc8c13bae3" InheritanceParent="0566662e-bb24-45f9-84d8-f3c1e5d083df">
+        <Parameter Name="WalkLegsAngle" Guid="f1939c45-b3c0-4ec2-bc0d-aff645e0cc81" Value="0.35" Type="float"/>
+        <Parameter Name="ModelName" Guid="5d389bab-48b6-41db-8f94-91209858f5af" Value="Models/HumanMale" Type="string"/>
+        <Parameter Name="TextureOverride" Guid="8d101fa5-9a1e-42da-b5c3-74f14b781592" Value="Textures/Butt-Head" Type="string"/>
+        <Parameter Name="WalkAnimationSpeed" Guid="770cbe49-b1bf-4036-bada-3bb1bb64c18d" Value="0.65" Type="float"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="Health" Guid="82c9c9e8-48f1-40b8-89b4-138dd255abde">
+        <Parameter Name="Health" Guid="096170bc-4ecf-4f5e-b705-e494c0786212" Value="20" Type="float"/>
+        <Parameter Name="FireResilience" Guid="c479e2ce-1d3a-4672-b4a2-565458e5f467" Value="12" Type="float"/>
+        <Parameter Name="AttackResilience" Guid="4d454d90-2ea3-4142-883f-0977e89bc179" Value="14" Type="float"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="OnFire" Guid="77d79548-74c2-46eb-b7cb-e5513d1499e1"/>
+    <MemberComponentTemplate Name="WalkAroundBehavior" Guid="114fc483-2fc3-4128-8c5c-a029c7a97c0a" InheritanceParent="aebb86ce-4ee6-4ca0-850d-cd60051e1d71"/>
+    <MemberComponentTemplate Name="HerdBehavior" Guid="143f4b4d-cd42-490d-843a-e1a9a3c8733d" InheritanceParent="dfe7218e-ce14-4bde-8dac-f919c38e9efe">
+        <Parameter Name="HerdName" Guid="bea62448-44ed-4a39-9f80-79d2578eef24" Value="Alianza" Type="string"/>
+        <Parameter Name="AutoNearbyCreaturesHelp" Guid="37195129-c33f-4adf-884b-4e8fdcd0a92e" Value="True" Type="bool"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="FeedBehavior" Guid="1a027273-fb23-4f5d-aa4c-c6b5fab0ddb5" InheritanceParent="3d5c9b46-1592-45de-ae90-9d050021a5ad">
+        <Parameter Name="AutoFeed" Guid="8ccb6aeb-3396-4df9-965d-d86ba26fd8b4" Value="False" Type="bool"/>
+    </MemberComponentTemplate>
+    <MemberComponentTemplate Name="ChaseBehavior" Guid="9c752dbb-2bec-4a60-a9d8-1a5c5933c28a" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
+        <Parameter Name="AutoChaseMask" Guid="f54ce61e-1bb9-4270-99cd-f3667ec7b9ad" Value="LandPredator, WaterPredator, WaterOther, Bird" Type="Game.CreatureCategory"/>
+        <Parameter Name="DayChaseRange" Guid="2714b5ac-ca96-4384-a340-b69976f880a2" Value="6" Type="float"/>
+        <Parameter Name="NightChaseRange" Guid="4aa6bed9-6479-40f5-a392-da886e1a57c6" Value="8" Type="float"/>
+        <Parameter Name="ChaseNonPlayerProbability" Guid="7b3d1a04-ed41-4c0c-8eb1-7d3ebdca7980" Value="0.02" Type="float"/>
+        <Parameter Name="NightChaseTime" Guid="e9b82b1f-100c-463e-a11b-674f7b1676e0" Value="15" Type="float"/>
+    </MemberComponentTemplate>
+    <ParameterSet Name="CreatureEggData" Guid="29095f09-6223-437d-bd15-96adf0c06a13">
+        <Parameter Name="Color" Guid="161a92b6-1e09-4612-8ee3-ded1c856dba3" Value="112,0,0" Type="Color"/>
+        <Parameter Name="TextureSlot" Guid="91f8768a-d797-4b83-b9df-cb64a00aa81c" Value="175" Type="int"/>
+        <Parameter Name="SwapUV" Guid="d177be4d-a73e-4848-a7e4-ee5efac64320" Value="False" Type="bool"/>
+        <Parameter Name="DisplayName" Guid="b53dbb37-fad7-4dbd-8912-f7ffebfcf0de" Value="Butt-Head Egg" Type="string"/>
+        <Parameter Name="EggTypeIndex" Guid="8ba7d78c-c4fa-4a81-9339-da64ec76c573" Value="217" Type="int"/>
+    </ParameterSet>
+</EntityTemplate>
+
+<EntityTemplate Name="Hombre Lava" Guid="a1b2c3d4-e5f6-4789-9012-3456789abcfe" InheritanceParent="e4275171-a39f-413f-8888-4c472868364d">
     <MemberComponentTemplate Name="AvoidPlayerBehavior" Guid="b2c3d4e5-f6a7-4890-9123-456789abcdf1" InheritanceParent="3942e891-6b50-467c-8da5-a15bc63e59e0">
         <Parameter Name="DayRange" Guid="c3d4e5f6-a7b8-4901-2345-6789abcdf002" Value="0" Type="float"/>
         <Parameter Name="NightRange" Guid="d4e5f6a7-b8c9-5012-3456-789abcdf0124" Value="0" Type="float"/>
@@ -1321,52 +1396,52 @@
         <ParameterSet Name="LootOnFire" Guid="a5b6c7d8-e9f0-7123-8901-def012345679"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Body" Guid="b8c9d0e1-f2a3-7234-9abc-ef0123456780">
-        <Parameter Name="Mass" Guid="c9d0e1f2-a3b4-7345-abcd-f01234567891" Value="60" Type="float"/>
+        <Parameter Name="Mass" Guid="c9d0e1f2-a3b4-7345-abcd-f01234567891" Value="80" Type="float"/>
         <Parameter Name="BoxSize" Guid="d0e1f2a3-b4c5-7456-bcde-0123456789a2" Value="0.9,0.95,0.9" Type="Vector3"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Creature" Guid="e1f2a3b4-c5d6-7567-cdef-123456789ab3">
-        <Parameter Name="DisplayName" Guid="f2a3b4c5-d6e7-7678-def0-23456789abc4" Value="Butt-Head" Type="string"/>
-        <Parameter Name="Category" Guid="a3b4c5d6-e7f8-7789-ef01-3456789abcd5" Value="LandOther" Type="Game.CreatureCategory"/>
-        <Parameter Name="Description" Guid="b4c5d6e7-f8a9-7890-f012-456789abcde6" Value="Beavis is a teenage boy with a nervous laugh, broken speech, and a volatile personality. He’s impulsive, emotionally unstable, and easily distracted, often triggered by fire, violence, or loud music. He speaks in short, repetitive phrases and acts without thinking, showing no awareness of consequences. Though he often follows Butt-Head, he’s not just a sidekick; he has unpredictable outbursts, especially when he transforms into his hyperactive alter ego “Cornholio,” obsessing over toilet paper and speaking incoherently. Beavis doesn’t seek meaning, control, or purpose. He survives simply because he does, unaware of the damage he causes or the world around him." Type="string"/>
-        <Parameter Name="KillVerbs" Guid="c5d6e7f8-a9b0-7901-0123-56789abcdef7" Value="Defeated, Beated" Type="string"/>
+        <Parameter Name="DisplayName" Guid="f2a3b4c5-d6e7-7678-def0-23456789abc4" Value="Hombre Lava" Type="string"/>
+        <Parameter Name="Category" Guid="a3b4c5d6-e7f8-7789-ef01-3456789abcd5" Value="LandPredator" Type="Game.CreatureCategory"/>
+        <Parameter Name="Description" Guid="b4c5d6e7-f8a9-7890-f012-456789abcde6" Value="Hombre Lava is a powerful creature that blends into the crowd until provoked. If you get too close, expect to be burned by his melee strikes. Try to run, and you’ll be hunted down by fireballs hurled with deadly precision. He belongs to the Muerte faction, so if you're part of Alianza, you'd better gear up with weapons beyond standard Survivalcraft 2 gear unless you're packing a musket, explosives, or an explosive crossbow, you're likely toast. Fire and magma are his allies; burning him only fuels his rage. His one true weakness is water submersion slows him, weakens his flame core, and eventually extinguishes his power. He avoids rivers, panics in rain, and takes heavy damage from splash-based weapons. If you want to survive an encounter, lure him into wet terrain and strike fast before he reignites." Type="string"/>
+        <Parameter Name="KillVerbs" Guid="c5d6e7f8-a9b0-7901-0123-56789abcdef7" Value="Cooked" Type="string"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="FindPlayerBehavior" Guid="d6e7f8a9-b0c1-8012-1234-6789abcdef08" InheritanceParent="44c9a961-258c-4eb3-81d1-d3ae249ae031"/>
     <MemberComponentTemplate Name="Miner" Guid="e7f8a9b0-c1d2-8123-2345-789abcdef019" InheritanceParent="8acca888-ba39-464f-bcf5-6ae15e448c62">
-        <Parameter Name="AttackPower" Guid="f8a9b0c1-d2e3-8234-3456-89abcdef012a" Value="5.5" Type="float"/>
+        <Parameter Name="AttackPower" Guid="f8a9b0c1-d2e3-8234-3456-89abcdef012a" Value="6.5" Type="float"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="HumanModel" Guid="a9b0c1d2-e3f4-8345-4567-9abcdef0123b" InheritanceParent="0566662e-bb24-45f9-84d8-f3c1e5d083df">
         <Parameter Name="WalkLegsAngle" Guid="b0c1d2e3-f4a5-8456-5678-abcdef01234c" Value="0.35" Type="float"/>
-        <Parameter Name="ModelName" Guid="c1d2e3f4-a5b6-8567-6789-bcdef012345d" Value="Models/HumanMale" Type="string"/>
-        <Parameter Name="TextureOverride" Guid="d2e3f4a5-b6c7-8678-789a-cdef0123456e" Value="Textures/Butt-Head" Type="string"/>
+        <Parameter Name="ModelName" Guid="c1d2e3f4-a5b6-8567-6789-bcdef012345d" Value="Models/Tank superior" Type="string"/>
+        <Parameter Name="TextureOverride" Guid="d2e3f4a5-b6c7-8678-789a-cdef0123456e" Value="Textures/Hombre Lava" Type="string"/>
         <Parameter Name="WalkAnimationSpeed" Guid="e3f4a5b6-c7d8-8789-89ab-def01234567f" Value="0.65" Type="float"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Health" Guid="f4a5b6c7-d8e9-8890-9abc-ef0123456780">
-        <Parameter Name="Health" Guid="a5b6c7d8-e9f0-8901-abcd-f01234567891" Value="20" Type="float"/>
-        <Parameter Name="FireResilience" Guid="b6c7d8e9-f0a1-9012-bcde-0123456789a2" Value="12" Type="float"/>
-        <Parameter Name="AttackResilience" Guid="c7d8e9f0-a1b2-9123-cdef-123456789ab3" Value="14" Type="float"/>
+        <Parameter Name="Health" Guid="a5b6c7d8-e9f0-8901-abcd-f01234567891" Value="30" Type="float"/>
+        <Parameter Name="FireResilience" Guid="b6c7d8e9-f0a1-9012-bcde-0123456789a2" Value="20" Type="float"/>
+        <Parameter Name="AttackResilience" Guid="c7d8e9f0-a1b2-9123-cdef-123456789ab3" Value="22" Type="float"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="OnFire" Guid="d8e9f0a1-b2c3-9234-def0-23456789abc4"/>
     <MemberComponentTemplate Name="WalkAroundBehavior" Guid="e9f0a1b2-c3d4-9345-ef01-3456789abcd5" InheritanceParent="aebb86ce-4ee6-4ca0-850d-cd60051e1d71"/>
     <MemberComponentTemplate Name="HerdBehavior" Guid="f0a1b2c3-d4e5-9456-f012-456789abcde6" InheritanceParent="dfe7218e-ce14-4bde-8dac-f919c38e9efe">
-        <Parameter Name="HerdName" Guid="a1b2c3d4-e5f6-9567-0123-56789abcdef7" Value="Alianza" Type="string"/>
+        <Parameter Name="HerdName" Guid="a1b2c3d4-e5f6-9567-0123-56789abcdef7" Value="Muerte" Type="string"/>
         <Parameter Name="AutoNearbyCreaturesHelp" Guid="b2c3d4e5-f6a7-9678-1234-6789abcdef08" Value="True" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="FeedBehavior" Guid="c3d4e5f6-a7b8-9789-2345-789abcdef019" InheritanceParent="3d5c9b46-1592-45de-ae90-9d050021a5ad">
         <Parameter Name="AutoFeed" Guid="d4e5f6a7-b8c9-9890-3456-89abcdef012a" Value="False" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="ChaseBehavior" Guid="e5f6a7b8-c9d0-9901-4567-9abcdef0123b" InheritanceParent="31894441-d90a-4549-9264-db9dbe20e234">
-        <Parameter Name="AutoChaseMask" Guid="f6a7b8c9-d0e1-0012-5678-abcdef01234c" Value="LandPredator, WaterPredator, WaterOther, Bird" Type="Game.CreatureCategory"/>
+        <Parameter Name="AutoChaseMask" Guid="f6a7b8c9-d0e1-0012-5678-abcdef01234c" Value="LandOther, WaterPredator, WaterOther, Bird" Type="Game.CreatureCategory"/>
         <Parameter Name="DayChaseRange" Guid="a7b8c9d0-e1f2-0123-6789-bcdef012345d" Value="6" Type="float"/>
         <Parameter Name="NightChaseRange" Guid="b8c9d0e1-f2a3-0234-789a-cdef0123456e" Value="8" Type="float"/>
-        <Parameter Name="ChaseNonPlayerProbability" Guid="c9d0e1f2-a3b4-0345-89ab-def01234567f" Value="0.02" Type="float"/>
+        <Parameter Name="ChaseNonPlayerProbability" Guid="c9d0e1f2-a3b4-0345-89ab-def01234567f" Value="1.0" Type="float"/>
         <Parameter Name="NightChaseTime" Guid="d0e1f2a3-b4c5-0456-9abc-ef0123456780" Value="15" Type="float"/>
     </MemberComponentTemplate>
     <ParameterSet Name="CreatureEggData" Guid="e1f2a3b4-c5d6-0567-cdef-123456789ab3">
-        <Parameter Name="Color" Guid="f2a3b4c5-d6e7-0678-def0-23456789abc4" Value="112,0,0" Type="Color"/>
-        <Parameter Name="TextureSlot" Guid="a3b4c5d6-e7f8-0789-ef01-3456789abcd5" Value="175" Type="int"/>
+        <Parameter Name="Color" Guid="f2a3b4c5-d6e7-0678-def0-23456789abc4" Value="219,95,0" Type="Color"/>
+        <Parameter Name="TextureSlot" Guid="a3b4c5d6-e7f8-0789-ef01-3456789abcd5" Value="92" Type="int"/>
         <Parameter Name="SwapUV" Guid="b4c5d6e7-f8a9-0890-f012-456789abcde6" Value="False" Type="bool"/>
-        <Parameter Name="DisplayName" Guid="c5d6e7f8-a9b0-0901-0123-56789abcdef7" Value="Butt-Head Egg" Type="string"/>
-        <Parameter Name="EggTypeIndex" Guid="d6e7f8a9-b0c1-1012-1234-6789abcdef08" Value="217" Type="int"/>
+        <Parameter Name="DisplayName" Guid="c5d6e7f8-a9b0-0901-0123-56789abcdef7" Value="Hombre Lava Egg" Type="string"/>
+        <Parameter Name="EggTypeIndex" Guid="d6e7f8a9-b0c1-1012-1234-6789abcdef08" Value="218" Type="int"/>
     </ParameterSet>
 </EntityTemplate>
     </Folder>
