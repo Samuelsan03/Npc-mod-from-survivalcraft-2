@@ -22,4 +22,4 @@ Beyond that, the mod is experimental. It doesn’t rely on external assets yet, 
 * Program of the original audios of Naomi and Paco: Loquendo and La Voz De Zueira
 * Program used for texture editing: IbisPaint and Pixel Art
 * Code taken from the npcs: from the original game Survivalcraft 2
-* Mod Birth Date: 3-11-2023
+* Mod Birth Date: 3-11-2025
