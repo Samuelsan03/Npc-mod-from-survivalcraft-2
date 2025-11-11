@@ -458,7 +458,7 @@
     <MemberComponentTemplate Name="HumanModel" Guid="6813e820-5e4a-4065-a1e5-2605ba9afec3" InheritanceParent="0566662e-bb24-45f9-84d8-f3c1e5d083df">
         <Parameter Name="WalkLegsAngle" Guid="0c9854fb-1091-41d3-8690-0bf8402696a3" Value="0.25" Type="float"/>
         <Parameter Name="ModelName" Guid="48b44198-9f5c-4d84-b256-01165211003c" Value="Models/HumanRealist" Type="string"/>
-        <Parameter Name="TextureOverride" Guid="40cb4a67-5b76-4af9-b7cc-78d37f4d6cd3" Value="Textures/El Marihuanero 2" Type="string"/>
+        <Parameter Name="TextureOverride" Guid="40cb4a67-5b76-4af9-b7cc-78d37f4d6cd3" Value="Textures/El Marihuanero Mamon" Type="string"/>
         <Parameter Name="WalkAnimationSpeed" Guid="37062224-05fa-467d-9deb-22f725ec1fea" Value="0.5" Type="float"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="Health" Guid="cc2f05b6-8742-4f96-ae75-f29e601703c6">
