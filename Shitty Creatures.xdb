@@ -1822,7 +1822,7 @@
     <MemberComponentTemplate Name="OnFire" Guid="bdc6ae6a-2481-42cb-86b3-c6dc0c2e7645"/>
     <MemberComponentTemplate Name="WalkAroundBehavior" Guid="d5264eb6-22ac-4714-8c41-39aab04cd3b7" InheritanceParent="aebb86ce-4ee6-4ca0-850d-cd60051e1d71"/>
     <MemberComponentTemplate Name="HerdBehavior" Guid="9544d4e8-2fc3-42e9-9f49-6e0a33acc146" InheritanceParent="dfe7218e-ce14-4bde-8dac-f919c38e9efe">
-        <Parameter Name="HerdName" Guid="92fe66ad-cd6a-4b53-a743-5703e9431344" Value="player" Type="string"/>
+        <Parameter Name="HerdName" Guid="92fe66ad-cd6a-4b53-a743-5703e9431344" Value="Alianza" Type="string"/>
         <Parameter Name="AutoNearbyCreaturesHelp" Guid="bfd6d50c-c93a-46f1-bd3a-a3987486393f" Value="True" Type="bool"/>
     </MemberComponentTemplate>
     <MemberComponentTemplate Name="FeedBehavior" Guid="6db3611f-39e7-4588-88d6-3c11fb8cdcb0" InheritanceParent="3d5c9b46-1592-45de-ae90-9d050021a5ad">
