@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Engine;
@@ -355,34 +355,35 @@ namespace Game
 			}
 			else
 			{
-				position = this.m_componentCreature.ComponentCreatureModel.EyePosition + 
-						   this.m_componentCreature.ComponentBody.Matrix.Right * 0.3f - 
-						   this.m_componentCreature.ComponentBody.Matrix.Up * 0.2f + 
+				position = this.m_componentCreature.ComponentCreatureModel.EyePosition +
+						   this.m_componentCreature.ComponentBody.Matrix.Right * 0.3f -
+						   this.m_componentCreature.ComponentBody.Matrix.Up * 0.2f +
 						   this.m_componentCreature.ComponentBody.Matrix.Forward * 0.2f;
 			}
-			
+
 			Vector3 targetDirection = this.m_componenttChaseBehavior.Target.ComponentBody.Position - position;
 			this.m_distance = targetDirection.Length();
-			
-			// CORRECCIÓN PRINCIPAL: Cálculo de velocidad mejorado
-			float baseSpeed = 25f; // Velocidad base aumentada
-			float distanceFactor = MathUtils.Clamp(this.m_distance / 10f, 0.5f, 2f);
+
+			// CORRECCIÓN MEJORADA: Disparo perfectamente lineal y preciso
+			float baseSpeed = 30f; // Velocidad aumentada para mejor impacto
+			float distanceFactor = MathUtils.Clamp(this.m_distance / 12f, 0.6f, 1.8f);
 			float speed = baseSpeed * distanceFactor;
-			
-			// CORRECCIÓN: Reducir dispersión aleatoria y mejorar precisión
+
+			// DISPARO PERFECTAMENTE LINEAL - Sin dispersión aleatoria
 			Vector3 direction = Vector3.Normalize(targetDirection);
-			Vector3 adjustedDirection = direction + this.m_random.Vector3(0.1f); // Menos dispersión
-			
-			// CORRECCIÓN: Cálculo de gravedad mejorado
-			float gravityCompensation = MathUtils.Lerp(3f, 8f, this.m_distance / 20f);
-			Vector3 velocity = Vector3.Normalize(adjustedDirection) * speed + new Vector3(0f, gravityCompensation, 0f);
-			
-			// Disparar el proyectil con mejor velocidad
+
+			// Compensación de gravedad mínima para trayectoria recta
+			float gravityCompensation = MathUtils.Lerp(1f, 3f, this.m_distance / 25f);
+
+			// Velocidad directa y precisa
+			Vector3 velocity = direction * speed + new Vector3(0f, gravityCompensation, 0f);
+
+			// Disparar el proyectil con máxima precisión
 			this.m_subsystemProjectiles.FireProjectile(
-				this.m_arrowValue, 
-				position, 
-				velocity, 
-				Vector3.Zero, 
+				this.m_arrowValue,
+				position,
+				velocity,
+				Vector3.Zero,
 				this.m_componentCreature
 			);
 
@@ -395,14 +396,14 @@ namespace Game
 					componentHumanModel.m_handAngles2 = new Vector2(MathUtils.DegToRad(-90f), componentHumanModel.m_handAngles2.Y);
 				}
 			}
-			
+
 			// Sonido
 			if (!string.IsNullOrEmpty(this.ThrowingSound))
 			{
 				float pitch = this.m_random.Float(-0.1f, 0.1f);
 				this.m_subsystemAudio.PlaySound(this.ThrowingSound, 1f, pitch, position, this.ThrowingSoundDistance, 0.1f);
 			}
-			
+
 			// Remover del inventario
 			if (this.DiscountFromInventory)
 			{
